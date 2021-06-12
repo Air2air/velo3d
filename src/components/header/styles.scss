@@ -5,52 +5,65 @@
   animation: expand-big 0.3s 1;
 }
 
-$navbar-height: 70px;
+$navbar-height: 80px;
+
+$logo-block-height: 22px;
 
 nav.navbar {
   height: $navbar-height;
   .container {
     height: $navbar-height;
     a.navbar-brand {
-      img {
-        height: 1em;
-      }
-      span {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 200;
-        letter-spacing: -0.01em;
-        font-size: 1.3em;
-        .tm {
-          font-size: 0.7em;
-          font-weight: 100;
+      .logo-block {
+        height: $logo-block-height;
+        img {
+          height: $logo-block-height;
+        }
+        div.assure {
+          height: $logo-block-height;
+          font-family: "Hind", sans-serif;
+          font-weight: 200;
+          letter-spacing: -0.01em;
+          line-height: 100%;
+          font-size: 1.5em;
+          margin-left:12px;
+          .tm {
+            height: $logo-block-height;
+            font-size: 0.6em;
+            font-weight: 100;
+            top: 0;
+          }
         }
       }
     }
     a.nav-link {
-      font-family: "Open Sans", sans-serif;
+      font-family: "Hind", sans-serif;
       font-weight: 300;
       letter-spacing: 0.02em;
-      font-size: 1em;
-      color: #fff;
+      font-size: 1.1em;
       text-decoration: none;
     }
   }
 }
 
-
 nav.navbar {
-  background: transparentize($color-base, .3);
+  background: transparentize($color-base, 0.3);
   .container {
     a.navbar-brand {
-      span {
+      div.assure {
         color: $color-contrast;
       }
     }
-    .nav-item {
+    a.nav-link {
+      color: #fff;
+      opacity: 0.6;
+      transition: all 0.1s;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
-
 
 // nav.navbar {
 //   background: gold;

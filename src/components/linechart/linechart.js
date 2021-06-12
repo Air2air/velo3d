@@ -4,6 +4,111 @@ import { ResponsiveLine } from "@nivo/line";
 
 import "./styles.scss";
 
+
+const theme = {
+
+  "textColor": "rgba(255,255,255,0.4)",
+  "fontSize": 14,
+  "axis": {
+      "domain": {
+          "line": {
+              "stroke": "#777777",
+              "strokeWidth": 1
+          }
+      },
+      "ticks": {
+          "line": {
+              "stroke": "#777777",
+              "strokeWidth": 1
+          }
+      }
+  },
+  "grid": {
+      "line": {
+          "stroke": "rgba(255,255,255,0.2)",
+          "strokeWidth": 1
+      }
+  }
+};
+
+const LineChart = () => {
+  return (
+    <div className="chart-div">
+      <ResponsiveLine
+        data={data}
+        theme={theme}
+        curve={"monotoneX"}
+        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        xScale={{ type: "point" }}
+        yScale={{
+          type: "linear",
+          min: "auto",
+          max: "auto",
+          stacked: true,
+          reverse: false,
+        }}
+        yFormat=" >-.2f"
+        axisTop={null}
+        axisRight={null}
+        axisBottom={{
+          orient: "bottom",
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: "transportation",
+          legendOffset: 36,
+          legendPosition: "middle",
+        }}
+        axisLeft={{
+          orient: "left",
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: "count",
+          legendOffset: -40,
+          legendPosition: "middle",
+        }}
+        lineWidth={2}
+        pointSize={10}
+        pointColor={{ theme: "background" }}
+        pointBorderWidth={0}
+        pointBorderColor={{ from: "serieColor" }}
+        pointLabelYOffset={-12}
+        enableArea={true}
+        useMesh={true}
+        legends={[
+          {
+            anchor: "bottom-right",
+            direction: "column",
+            justify: false,
+            translateX: 100,
+            translateY: 0,
+            itemsSpacing: 0,
+            itemDirection: "left-to-right",
+            itemWidth: 80,
+            itemHeight: 20,
+            itemOpacity: 0.75,
+            symbolSize: 12,
+            symbolShape: "circle",
+            symbolBorderColor: "rgba(0, 0, 0, .5)",
+            effects: [
+              {
+                on: "hover",
+                style: {
+                  itemBackground: "rgba(0, 0, 0, .03)",
+                  itemOpacity: 1,
+                },
+              },
+            ],
+          },
+        ]}
+      />
+    </div>
+  );
+};
+
+
+
 let data = [
   {
     id: "japan",
@@ -277,106 +382,4 @@ let data = [
   },
 ];
 
-const theme = {
-
-  "textColor": "rgba(255,255,255,0.4)",
-  "fontSize": 14,
-  "axis": {
-      "domain": {
-          "line": {
-              "stroke": "#777777",
-              "strokeWidth": 1
-          }
-      },
-      "ticks": {
-          "line": {
-              "stroke": "#777777",
-              "strokeWidth": 1
-          }
-      }
-  },
-  "grid": {
-      "line": {
-          "stroke": "rgba(255,255,255,0.2)",
-          "strokeWidth": 1
-      }
-  }
-};
-
-const ChartPage = () => {
-  return (
-    <div className="chart-div">
-      <ResponsiveLine
-        data={data}
-        theme={theme}
-        curve={"monotoneX"}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
-        xScale={{ type: "point" }}
-        yScale={{
-          type: "linear",
-          min: "auto",
-          max: "auto",
-          stacked: true,
-          reverse: false,
-        }}
-        yFormat=" >-.2f"
-        axisTop={null}
-        axisRight={null}
-        axisBottom={{
-          orient: "bottom",
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: "transportation",
-          legendOffset: 36,
-          legendPosition: "middle",
-        }}
-        axisLeft={{
-          orient: "left",
-          tickSize: 5,
-          tickPadding: 5,
-          tickRotation: 0,
-          legend: "count",
-          legendOffset: -40,
-          legendPosition: "middle",
-        }}
-        lineWidth={2}
-        pointSize={10}
-        pointColor={{ theme: "background" }}
-        pointBorderWidth={0}
-        pointBorderColor={{ from: "serieColor" }}
-        pointLabelYOffset={-12}
-        enableArea={true}
-        useMesh={true}
-        legends={[
-          {
-            anchor: "bottom-right",
-            direction: "column",
-            justify: false,
-            translateX: 100,
-            translateY: 0,
-            itemsSpacing: 0,
-            itemDirection: "left-to-right",
-            itemWidth: 80,
-            itemHeight: 20,
-            itemOpacity: 0.75,
-            symbolSize: 12,
-            symbolShape: "circle",
-            symbolBorderColor: "rgba(0, 0, 0, .5)",
-            effects: [
-              {
-                on: "hover",
-                style: {
-                  itemBackground: "rgba(0, 0, 0, .03)",
-                  itemOpacity: 1,
-                },
-              },
-            ],
-          },
-        ]}
-      />
-    </div>
-  );
-};
-
-export default ChartPage;
+export default LineChart;

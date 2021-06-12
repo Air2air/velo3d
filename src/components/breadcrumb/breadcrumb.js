@@ -12,22 +12,22 @@ const Breadcrumb = (props) => {
         <AiFillCaretRight size=".7em" className="icon mx-2" />
         <span>{props.title} </span>
         <div className="count total d-flex align-items-center justify-content-center mx-2">
-          {props.countTotal}
+        <span>{props.countTotal}</span>
         </div>
       </Col>
 
       <Col className="d-flex align-items-center justify-content-end">
         <div className="count completed d-flex align-items-center justify-content-center mx-2">
-          {props.countCompleted}
+          <span>{props.countCompleted}</span>
         </div>
         <div className="count success d-flex align-items-center justify-content-center mx-2">
-          {props.countSuccess}
+        <span>{props.countSuccess}</span>
         </div>
         <div className="count warning d-flex align-items-center justify-content-center mx-2">
-          {props.countWarning}
+        <span>{props.countWarning}</span>
         </div>
         <div className="count danger d-flex align-items-center justify-content-center mx-2">
-          {props.countDanger}
+        <span>{props.countDanger}</span>
         </div>
       </Col>
     </Row>

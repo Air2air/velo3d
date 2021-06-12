@@ -1,0 +1,68 @@
+@import "./../../styles/_animations.scss";
+@import "./../../styles/_colors.scss";
+
+.nav-icon-link[reaction="1"] {
+  animation: expand-big 0.3s 1;
+}
+
+$navbar-height: 70px;
+
+nav.navbar {
+  height: $navbar-height;
+  .container {
+    height: $navbar-height;
+    a.navbar-brand {
+      img {
+        height: 1em;
+      }
+      span {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 200;
+        letter-spacing: -0.01em;
+        font-size: 1.3em;
+        .tm {
+          font-size: 0.7em;
+          font-weight: 100;
+        }
+      }
+    }
+    a.nav-link {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      font-size: 1em;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+
+nav.navbar {
+  background: transparentize($color-base, .3);
+  .container {
+    a.navbar-brand {
+      span {
+        color: $color-contrast;
+      }
+    }
+    .nav-item {
+    }
+  }
+}
+
+
+// nav.navbar {
+//   background: gold;
+//   .container {
+//     background: red;
+//     a.navbar-brand {
+//       span {
+//         font-size: 1.3em;
+//         color: $color-contrast;
+//       }
+//     }
+//     .nav-item {
+//     }
+//   }
+// }

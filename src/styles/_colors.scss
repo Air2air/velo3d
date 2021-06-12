@@ -1,0 +1,19 @@
+$color-base: #2c364e;
+$color-contrast: #478fec;
+$color-gray: #5d666f;
+
+body {
+  transition: background-color 0.3s;
+}
+
+body {
+  background: $color-base;
+}
+
+$success: rgb(23, 146, 23);
+
+$primary: rgb(16, 140, 189);
+
+$warning: rgb(240, 157, 33);
+
+$danger: rgb(233, 27, 27);

@@ -1,0 +1,53 @@
+$panel-height: 300px;
+
+div.panel {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: $panel-height;
+  transition: transform 250ms ease;
+  cursor: pointer;
+  div.panel-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $panel-height;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+  }
+  div.panel-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $panel-height;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+  }
+  &:hover {
+    transform: scale(1.02);
+
+  }
+  div.panel-buttons {
+    
+  }
+}
+
+.panel {
+  &.success {
+    background-color: rgb(23, 146, 23);
+  }
+  &.primary {
+    background-color: rgb(16, 140, 189);
+  }
+
+  &.warning {
+    background-color: rgb(240, 157, 33);
+  }
+  &.danger {
+    background-color: rgb(233, 27, 27);
+  }
+}

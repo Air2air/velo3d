@@ -8,15 +8,15 @@ function CardTime(props) {
     <div className="card-time p-4 d-flex flex-column justify-content-between">
       <div className="time-total mt-5">
         <div className="d-flex">
-          <div class="legend">Total time:</div>
+          <div className="legend">Total time:</div>
           {timeDiffCalc(new Date(props.startTime), new Date(props.endTime))}
         </div>
         <div className="d-flex">
-          <div class="legend">Start time:</div>
+          <div className="legend">Start time:</div>
           {props.startTime}
         </div>
         <div className="d-flex">
-          <div class="legend">End time:</div>
+          <div className="legend">End time:</div>
           {props.endTime}
         </div>
       </div>

@@ -11,15 +11,21 @@ import CardHeader from "./card-header/card-header";
 import CardImage from "./card-image/card-image";
 import CardDownload from "./card-download/card-download";
 import CardTime from "./card-time/card-time";
+
 import "./styles.scss";
 
-const dataSource = "./json/tools.json";
+// const dataSource = toolsJson;
 
 const Card = () => {
   const [tools, setTool] = useState([]);
 
   useEffect(() => {
-    fetch(dataSource)
+    fetch("data.json", {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+    })
       .then((data) => data.json())
       .then(({ tools }) => {
         setTool(tools);
@@ -39,7 +45,7 @@ const Card = () => {
           color,
           image,
           jobStatus,
-          completion
+          completion,
         } = tool;
         return (
           <Col key={toolId} className="mb-4">

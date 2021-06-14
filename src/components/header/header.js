@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaUserAlt } from "react-icons/fa";
+import  logoVelo  from "./../../images/logo-velo.svg";
 import "./styles.scss";
 
 function Header() {
@@ -9,7 +10,7 @@ function Header() {
       <Container>
         <Navbar.Brand href="/" className="p-0">
           <div className="logo-block d-flex align-items-center">
-            <img src="/images/logo_velo.svg" alt="Velo 3D" />
+            <img src={logoVelo} alt="Velo 3D" />
             <div className="assure">
               Assure
               <span className="tm mx-1 align-self-top">&trade;</span>

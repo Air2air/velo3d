@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
+// import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
 
-import { Row, Col } from "react-bootstrap";
+import { RiTimeFill } from "react-icons/ri";
+import { FaCamera } from "react-icons/fa";
+import { ImDownload } from "react-icons/im";
+
+import { Row, Col, Nav } from "react-bootstrap";
 import { motion } from "framer-motion";
 import CardHeader from "./card-header/card-header";
-import CardButtons from "./card-buttons/card-buttons";
+// import CardButtons from "./card-buttons/card-buttons";
 import CardImage from "./card-image/card-image";
 import CardDownload from "./card-download/card-download";
 import CardTime from "./card-time/card-time";
@@ -11,7 +17,7 @@ import "./styles.scss";
 
 const dataSource = "./json/tools.json";
 
-function Card() {
+const Card = () => {
   const [tools, setTool] = useState([]);
 
   useEffect(() => {
@@ -43,7 +49,7 @@ function Card() {
               animate={{ opacity: 1 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              transition={{ duration: 0.03 }}
+              transition={{ duration: 0.15 }}
               className="card"
             >
               <CardHeader
@@ -52,15 +58,50 @@ function Card() {
                 toolDesc={toolDesc}
                 jobStatus={jobStatus}
               />
+
               <div className="card-content d-flex flex-column justify-content-between p-0">
-                <CardButtons />
-                <CardImage image={image} />
-                <CardDownload
-                  startTime={startTime}
-                  endTime={endTime}
-                  hasReport={hasReport}
-                />
-                <CardTime startTime={startTime} endTime={endTime} />
+                <Tab.Container id={toolId} defaultActiveKey="first">
+                  <div className="card-buttons d-flex align-items-center justify-content-around">
+                    <div
+                      eventKey="first"
+                      className="d-flex justify-content-center align-items-center card-button-icon"
+                    >
+                      <Nav.Link eventKey="first">
+                        <RiTimeFill color="#FFF" size="1.8em" />
+                      </Nav.Link>
+                    </div>
+                    <div
+                      eventKey="second"
+                      className="d-flex justify-content-center align-items-center card-button-icon"
+                    >
+                      <Nav.Link eventKey="second">
+                        <FaCamera color="#FFF" size="1.8em" />
+                      </Nav.Link>
+                    </div>
+                    <div className="d-flex justify-content-center align-items-center card-button-icon">
+                      <Nav.Link eventKey="third">
+                        <ImDownload color="#FFF" size="1.8em" />
+                      </Nav.Link>
+                    </div>
+                  </div>
+
+                  <Tab.Content>
+                  <Tab.Pane eventKey="first">
+                      <CardTime startTime={startTime} endTime={endTime} />
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="second">
+                      <CardImage image={image} />
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">
+                      <CardDownload
+                        startTime={startTime}
+                        endTime={endTime}
+                        hasReport={hasReport}
+                      />
+                    </Tab.Pane>
+
+                  </Tab.Content>
+                </Tab.Container>
               </div>
             </motion.div>
           </Col>
@@ -68,6 +109,6 @@ function Card() {
       })}
     </Row>
   );
-}
+};
 
 export default Card;

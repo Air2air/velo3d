@@ -1,40 +1,27 @@
 import React from "react";
-
 import { RiTimeFill } from "react-icons/ri";
 import { FaCamera } from "react-icons/fa";
 import { ImDownload } from "react-icons/im";
-
-import { motion } from "framer-motion";
 import "./styles.scss";
 
-const CardButton = (props) => {
-  return (
-    <div className="card-buttons mb-2 p-3 d-flex align-items-center justify-content-around">
-      <motion.div
-        initial={{ opacity: 0.7 }}
-        whileHover={{ opacity: 1 }}
-        transition={{ duration: 0.1 }}
-        className="card-button-icon"
-      >
-        <RiTimeFill color="#FFF" size="1.8em" />
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0.7 }}
-        whileHover={{ opacity: 1 }}
-        transition={{ duration: 0.1 }}
-        className="card-button-icon"
-      >
-        <FaCamera color="#FFF" size="1.8em" />
-      </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0.7 }}
-        whileHover={{ opacity: 1 }}
-        transition={{ duration: 0.1 }}
-        className="card-button-icon"
-      >
+
+
+
+
+
+const CardButton = (props) => {
+  return ( 
+    <div className="card-buttons d-flex align-items-center justify-content-around">
+      <div id={1} className="d-flex justify-content-center align-items-center card-button-icon">
+        <RiTimeFill color="#FFF" size="1.8em" />
+      </div>
+      <div id={2} className="d-flex justify-content-center align-items-center card-button-icon">
+        <FaCamera color="#FFF" size="1.8em" />
+      </div>
+      <div id={3} className="d-flex justify-content-center align-items-center card-button-icon">
         <ImDownload color="#FFF" size="1.8em" />
-      </motion.div>
+      </div>
     </div>
   );
 };

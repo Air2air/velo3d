@@ -23,10 +23,10 @@ let statusIcon = (jobStatus) => {
 const CardHeader = (props) => {
   return (
     <div
-      className={`card-header mb-2 p-3 d-flex align-items-center justify-content-between ${props.color}`}
+      className={`card-header p-3 d-flex align-items-center justify-content-between ${props.color}`}
     >
       <div className="card-header-title">
-        <h4 style={{ padding: 0, margin: 0 }}>{props.toolName}</h4>
+        <h5 style={{ padding: 0, margin: 0 }}>{props.toolName}</h5>
         <p>{props.toolDesc}</p>
       </div>
       <motion.div

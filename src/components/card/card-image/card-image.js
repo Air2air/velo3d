@@ -4,9 +4,9 @@ import "./styles.scss";
 function CardImage(props) {
   return (
     <div
-    className="card-image"
-    style={{ backgroundImage: `url(${props.image})` }}
-  ></div>
+      className="card-image"
+      style={{ backgroundImage: `url(${props.image})` }}
+    ></div>
   );
 }
 

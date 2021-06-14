@@ -1,2 +1,12 @@
 @import "./../../../styles/_colors.scss";
 @import "./../../../styles/_dimensions.scss";
+
+
+div.card-time {
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: $card-content-height;
+    width: 100%;
+  }
+  

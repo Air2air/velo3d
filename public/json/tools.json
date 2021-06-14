@@ -12,7 +12,7 @@
       "layerTotal": 2078,
       "color": "success",
       "image": "/images/layers-1.jpg",
-      "hasReport": true,
+      "isCompleted": false,
       "jobStatus": "success"
     },
     {
@@ -27,7 +27,7 @@
       "layerTotal": 2078,
       "color": "warning",
       "image": "/images/layers-2.jpg",
-      "hasReport": false,
+      "isCompleted": false,
       "jobStatus": "alert"
     },
     {
@@ -42,7 +42,7 @@
       "layerTotal": 2078,
       "color": "primary",
       "image": "/images/layers-3.jpg",
-      "hasReport": true,
+      "isCompleted": true,
       "jobStatus": "complete"
     },
     {
@@ -57,7 +57,7 @@
       "layerTotal": 2078,
       "color": "danger",
       "image": "/images/layers-2.jpg",
-      "hasReport": false,
+      "isCompleted": false,
       "jobStatus": "failed"
     },
     {
@@ -72,7 +72,7 @@
       "layerTotal": 2078,
       "color": "primary",
       "image": "/images/layers-3.jpg",
-      "hasReport": true,
+      "isCompleted": true,
       "jobStatus": "complete"
     },
     {
@@ -87,7 +87,7 @@
       "layerTotal": 2078,
       "color": "primary",
       "image": "/images/layers-1.jpg",
-      "hasReport": true,
+      "isCompleted": true,
       "jobStatus": "complete"
     }
   ]

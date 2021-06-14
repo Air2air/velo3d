@@ -35,7 +35,7 @@ const Card = () => {
           toolId,
           toolName,
           toolDesc,
-          hasReport,
+          isCompleted,
           startTime,
           endTime,
           color,
@@ -62,18 +62,12 @@ const Card = () => {
               <div className="card-content d-flex flex-column justify-content-between p-0">
                 <Tab.Container id={toolId} defaultActiveKey="first">
                   <div className="card-buttons d-flex align-items-center justify-content-around">
-                    <div
-                      eventKey="first"
-                      className="d-flex justify-content-center align-items-center card-button-icon"
-                    >
+                    <div className="d-flex justify-content-center align-items-center card-button-icon">
                       <Nav.Link eventKey="first">
                         <RiTimeFill color="#FFF" size="1.8em" />
                       </Nav.Link>
                     </div>
-                    <div
-                      eventKey="second"
-                      className="d-flex justify-content-center align-items-center card-button-icon"
-                    >
+                    <div className="d-flex justify-content-center align-items-center card-button-icon">
                       <Nav.Link eventKey="second">
                         <FaCamera color="#FFF" size="1.8em" />
                       </Nav.Link>
@@ -86,20 +80,23 @@ const Card = () => {
                   </div>
 
                   <Tab.Content>
-                  <Tab.Pane eventKey="first">
-                      <CardTime startTime={startTime} endTime={endTime} />
+                    <Tab.Pane eventKey="first">
+                      <CardTime
+                        startTime={startTime}
+                        endTime={endTime}
+                        isCompleted={isCompleted}
+                      />
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <CardImage image={image} />
+                      <CardImage image={image} endTime={endTime} />
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <CardDownload
                         startTime={startTime}
                         endTime={endTime}
-                        hasReport={hasReport}
+                        isCompleted={isCompleted}
                       />
                     </Tab.Pane>
-
                   </Tab.Content>
                 </Tab.Container>
               </div>

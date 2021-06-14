@@ -24,12 +24,12 @@ function CardTime(props) {
         {props.isCompleted === true ? (
           ""
         ) : (
-          <div className="chart-wrapper p-0">
+          <div className="chart-wrapper p-0 px-1">
             <ResponsiveBar
               borderColor="none"
               colors={{ scheme: "blues" }}
               padding={0}
-              height={30}
+              height={16}
               layout="horizontal"
               animate={true}
               margin={{ top: 0, right: 0, bottom: 0, left: 0 }}

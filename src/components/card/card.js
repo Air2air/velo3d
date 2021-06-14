@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Tab from "react-bootstrap/Tab";
 
 import { RiTimeFill } from "react-icons/ri";
@@ -12,23 +12,27 @@ import CardImage from "./card-image/card-image";
 import CardDownload from "./card-download/card-download";
 import CardTime from "./card-time/card-time";
 
+import tools from "./../../data";
+
 import "./styles.scss";
 
 const Card = () => {
-  const [tools, setTool] = useState([]);
+  // const [tools, setTool] = useState([]);
 
-  useEffect(() => {
-    fetch("data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-      },
-    })
-      .then((data) => data.json())
-      .then(({ tools }) => {
-        setTool(tools);
-      });
-  }, []);
+  /*
+  // useEffect(() => {
+  //   fetch("data.json", {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "Accept": "application/json",
+  //     },
+  //   })
+  //     .then((data) => data.json())
+  //     .then(({ tools }) => {
+  //       setTool(tools);
+  //     });
+  // }, []);
+  */
 
   return (
     <Row xs={1} sm={1} md={2} lg={2} xl={3}>

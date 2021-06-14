@@ -4,19 +4,22 @@ import Breadcrumb from "../../components/breadcrumb/breadcrumb";
 import Card from "../../components/card/card";
 import "./styles.scss";
 
-const dataSource = "./json/tools.json";
 
 function HomePage() {
-  // const [currentPage, setCurrentPage] = useState(0);
+
   const [tools, setTool] = useState([]);
 
   useEffect(() => {
-    fetch(dataSource)
+    fetch("data.json", {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+    })
       .then((data) => data.json())
       .then(({ tools }) => {
         setTool(tools);
       });
-    // setCurrentPage(0);
   }, []);
 
   const section = "Dashboard";

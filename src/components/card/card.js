@@ -14,8 +14,6 @@ import CardTime from "./card-time/card-time";
 
 import "./styles.scss";
 
-// const dataSource = toolsJson;
-
 const Card = () => {
   const [tools, setTool] = useState([]);
 

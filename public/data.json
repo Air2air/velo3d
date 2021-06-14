@@ -11,7 +11,7 @@
       "layerCurrent": 1234,
       "layerTotal": 2078,
       "color": "success",
-      "image": "/images/layers-1.jpg",
+      "image": "layers-1",
       "isCompleted": false,
       "jobStatus": "success",
       "completion": 14
@@ -27,7 +27,7 @@
       "layerCurrent": 1534,
       "layerTotal": 2078,
       "color": "warning",
-      "image": "/images/layers-2.jpg",
+      "image": "layers-2",
       "isCompleted": false,
       "jobStatus": "alert",
       "completion": 58
@@ -43,7 +43,7 @@
       "layerCurrent": 1853,
       "layerTotal": 2078,
       "color": "primary",
-      "image": "/images/layers-3.jpg",
+      "image": "layers-3",
       "isCompleted": true,
       "jobStatus": "complete",
       "completion": 58
@@ -59,7 +59,7 @@
       "layerCurrent": 764,
       "layerTotal": 2078,
       "color": "danger",
-      "image": "/images/layers-2.jpg",
+      "image": "layers-2",
       "isCompleted": false,
       "jobStatus": "failed",
       "completion": 87
@@ -75,7 +75,7 @@
       "layerCurrent": 1219,
       "layerTotal": 2078,
       "color": "primary",
-      "image": "/images/layers-3.jpg",
+      "image": "layers-3",
       "isCompleted": true,
       "jobStatus": "complete",
       "completion": 13
@@ -91,7 +91,7 @@
       "layerCurrent": 1345,
       "layerTotal": 2078,
       "color": "primary",
-      "image": "/images/layers-1.jpg",
+      "image": "layers-1",
       "isCompleted": true,
       "jobStatus": "complete"
       ,

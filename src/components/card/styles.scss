@@ -1,0 +1,21 @@
+
+@import "./../../styles/_colors.scss";
+@import "./../../styles/_dimensions.scss";
+
+div.card {
+  border:none;
+  border-radius:2px;
+}
+
+div.card-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: $card-height;
+  transition: transform 250ms ease;
+  cursor: pointer;
+}
+
+div.card-content {
+background-color: $card-gray;
+}

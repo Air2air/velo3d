@@ -1,0 +1,13 @@
+
+/* Saves the additional task of having to figure out relative paths */
+
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@styles/*": ["styles/*"],
+      "@pages/*": ["pages/*"]
+    }
+  }
+}

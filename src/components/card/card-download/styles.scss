@@ -1,0 +1,9 @@
+@import "./../../../styles/_colors.scss";
+@import "./../../../styles/_dimensions.scss";
+
+div.card-download {
+    position:absolute;
+    top:0;
+    width:100%;
+    height: $card-content-height;
+}

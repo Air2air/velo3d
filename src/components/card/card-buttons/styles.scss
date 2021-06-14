@@ -1,0 +1,14 @@
+@import "./../../../styles/_colors.scss";
+@import "./../../../styles/_dimensions.scss";
+
+
+div.card-buttons{
+  z-index: +2;
+  width: 100%;
+  height: $card-button-height;
+  div.button-header-icon {
+    float: right;
+    text-align: right;
+  }
+}
+

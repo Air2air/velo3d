@@ -1,7 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -27,8 +28,17 @@ module.exports = {
     ],
   },
   optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin()],
     minimizer: [
-      new CssMinimizerPlugin()
+      (compiler) => {
+        const TerserPlugin = require("terser-webpack-plugin");
+        new TerserPlugin({
+          terserOptions: {
+            compress: {},
+          },
+        }).apply(compiler);
+      },
     ],
   },
   resolve: {
@@ -38,7 +48,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: "public/index.html",
-    })
+    }),
   ],
   output: {
     path: path.resolve(__dirname, "./dist"),

@@ -41,6 +41,7 @@ const Card = () => {
           color,
           image,
           jobStatus,
+          completion
         } = tool;
         return (
           <Col key={toolId} className="mb-4">
@@ -48,7 +49,7 @@ const Card = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
+              whileTap={{ scale: 1 }}
               transition={{ duration: 0.15 }}
               className="card"
             >
@@ -85,6 +86,7 @@ const Card = () => {
                         startTime={startTime}
                         endTime={endTime}
                         isCompleted={isCompleted}
+                        completion={completion}
                       />
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">

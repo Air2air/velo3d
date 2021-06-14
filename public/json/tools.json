@@ -13,7 +13,8 @@
       "color": "success",
       "image": "/images/layers-1.jpg",
       "isCompleted": false,
-      "jobStatus": "success"
+      "jobStatus": "success",
+      "completion": 14
     },
     {
       "toolId": "ga14",
@@ -28,7 +29,8 @@
       "color": "warning",
       "image": "/images/layers-2.jpg",
       "isCompleted": false,
-      "jobStatus": "alert"
+      "jobStatus": "alert",
+      "completion": 58
     },
     {
       "toolId": "ga15",
@@ -43,7 +45,8 @@
       "color": "primary",
       "image": "/images/layers-3.jpg",
       "isCompleted": true,
-      "jobStatus": "complete"
+      "jobStatus": "complete",
+      "completion": 58
     },
     {
       "toolId": "ga16",
@@ -58,7 +61,8 @@
       "color": "danger",
       "image": "/images/layers-2.jpg",
       "isCompleted": false,
-      "jobStatus": "failed"
+      "jobStatus": "failed",
+      "completion": 87
     },
     {
       "toolId": "ga17",
@@ -73,7 +77,8 @@
       "color": "primary",
       "image": "/images/layers-3.jpg",
       "isCompleted": true,
-      "jobStatus": "complete"
+      "jobStatus": "complete",
+      "completion": 13
     },
     {
       "toolId": "ga18",
@@ -89,6 +94,8 @@
       "image": "/images/layers-1.jpg",
       "isCompleted": true,
       "jobStatus": "complete"
+      ,
+      "completion": 73
     }
   ]
 }

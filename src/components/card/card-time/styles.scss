@@ -7,8 +7,20 @@ div.card-time {
   left: 0;
   height: $card-content-height;
   width: 100%;
-  .chart-wrapper {
-    height: 30px;
-    background:darken($card-gray, 10%);
+  .time-total {
+    height: 80px;
+    //background-color: red;
+    .legend {
+      width: 80px;
+      opacity: 0.5;
+    }
+  }
+  .chart-div {
+    height: 80px;
+    //background-color: gold;
+    .chart-wrapper {
+      height: 30px;
+      background: darken($color-gray, 10%);
+    }
   }
 }

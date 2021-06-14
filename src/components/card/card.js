@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 
 import { RiTimeFill } from "react-icons/ri";
@@ -9,7 +8,6 @@ import { ImDownload } from "react-icons/im";
 import { Row, Col, Nav } from "react-bootstrap";
 import { motion } from "framer-motion";
 import CardHeader from "./card-header/card-header";
-// import CardButtons from "./card-buttons/card-buttons";
 import CardImage from "./card-image/card-image";
 import CardDownload from "./card-download/card-download";
 import CardTime from "./card-time/card-time";
